@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+ html {
+    margin: 0;
+    margin: 0 auto;  
+    padding: 0;
+    width: 100%;
+    font-family: sans-serif;
+
+
+    .wrapper {
+        width: 1200px;
+        height: auto;
+
+        .textarea {
+            display: block;
+            width: 800px;
+            height: 300px;
+            margin: 0 auto 10px;
+            padding: 10px;
+            font-size: 18px;
+            color: #444;
+            overflow: hidden;
+        }
+    
+        .keyboard {
+            width: 704px;
+            margin: 0 auto;            
+            margin-top: 40px;
+    
+            .row {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                margin-bottom: 4px;
+                
+                .alt, 
+                .arrow, 
+                .backspace, 
+                .capslock, 
+                .ctrl, 
+                .del, 
+                .enter, 
+                .shift, 
+                .shift-right, 
+                .tab, 
+                .win {
+                    font-weight: 600;
+                    color: grey;
+                    background-color: #1c232e;
+                }
+
+                .key {
+                    width: 40px;
+                    height: 40px;
+                    margin-left: 6px;
+                    font-weight: 500;
+                    line-height: 40px;
+                    text-align: center;
+                    color: #fff;
+                    background: #3a424e;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    user-select: none;
+                    transition: border-radius .3s,background-color .2s;
+                    -webkit-transition: border-radius .3s,background-color .2s;
+                    -moz-transition: border-radius .3s,background-color .2s;
+                    -ms-transition: border-radius .3s,background-color .2s;
+                    -o-transition: border-radius .3s,background-color .2s;
+                
+                    &.alt, &.arrow, &.backspace, &.capslock, &.ctrl, &.del, &.enter, &.shift, &.shift-right, &.tab, &.win {
+                        background: #251c1c;
+                        font-weight: 600;
+                        color: grey;
+                    }
+
+                    &:active {
+                        background-color: #5571ee;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                    }
+
+                    & > .on {
+                        display: inherit;
+
+                        & > .down {
+                            display: inherit;
+                        }
+
+                        & > .up {
+                            display: none;
+                        }
+                    }
+
+
+                    & > .off {
+                        display: none;
+
+                        & > .down {
+                            display: inherit;
+                        }
+
+                        & > .up {
+                            display: none;
+                        }
+                    }
+
+
+                }
+
+                .tab, .del {
+                    width: 44px;
+                }
+
+                .enter, .shift-right {
+                    width: 86px;
+                }
+                
+                .backspace, .capslock, .shift {
+                    width: 100px;
+                }
+
+                .space {
+                    width: 330px;
+                }
+            }
+        }
+    }
+    
+}

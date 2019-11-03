@@ -36,3 +36,51 @@ function createMarkup() {
 
 createMarkup();
 
+
+
+const keyboard =  document.querySelector('.keyboard');
+const textarea = document.querySelector('.textarea');
+
+function hover(event) {
+    let target = event.target || event.srcElement;
+    const textarea = document.querySelector('.textarea');
+    let key = target.closets('.key')
+    
+    if(!key) return;
+    key.classList.add('.hover')
+
+    
+}
+keyboard.addEventListener('mousover', hover);
+
+
+function typeBtn(e) {
+    let target = event.target || event.srcElement;
+    let key = target.closest('.key')
+
+    if(!key) return; 
+
+    if(key) {
+        textarea.value += key.innerText;
+    }
+
+
+}
+
+keyboard.addEventListener('mousedown', typeBtn);
+
+
+function typeMouseBtn(e) {
+    let target = event.target || event.srcElement;
+    let key = target.closest('.case')
+    
+    if(!key) return;
+    console.log(key.innerText.charCodeAt(0));
+    if (33 < key.innerText.charCodeAt() && 126 > key.innerText.charCodeAt() ||
+        1140 < key.innerText.charCodeAt() && 1105 > key.innerText.charCodeAt()) textarea.value += key.innerText;
+    
+}
+
+
+keyboard.addEventListener('click', typeMouseBtn);
+

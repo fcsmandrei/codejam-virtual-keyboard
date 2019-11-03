@@ -12,13 +12,14 @@ body,
 
 
     .wrapper {
+        margin-top: 30px;
         width: 1200px;
         height: auto;
 
         .textarea {
             display: block;
             width: 800px;
-            height: 300px;
+            height: 200px;
             margin: 0 auto 10px;
             padding: 10px;
             font-size: 18px;
@@ -37,21 +38,7 @@ body,
                 justify-content: space-between;
                 margin-bottom: 4px;
                 
-                .alt, 
-                .arrow, 
-                .backspace, 
-                .capslock, 
-                .ctrl, 
-                .del, 
-                .enter, 
-                .shift, 
-                .shift-right, 
-                .tab, 
-                .win {
-                    font-weight: 600;
-                    color: grey;
-                    background-color: #1c232e;
-                }
+                
 
                 .key {
                     width: 40px;
@@ -71,13 +58,12 @@ body,
                     -ms-transition: border-radius .3s,background-color .2s;
                     -o-transition: border-radius .3s,background-color .2s;
                 
-                    &.alt, &.arrow, &.backspace, &.capslock, &.ctrl, &.del, &.enter, &.shift, &.shift-right, &.tab, &.win {
-                        background: #251c1c;
-                        font-weight: 600;
-                        color: grey;
-                    }
+                   &:hover, &.hover {
+                       background-color:lighten(#3a424e,10%);;
+                       
+                   }
 
-                    &:active {
+                    &:active, &.active {
                         background-color: #5571ee;
                         border-radius: 50%;
                         -webkit-border-radius: 50%;
@@ -112,6 +98,22 @@ body,
                     }
 
 
+                }
+
+                .alt, 
+                .arrow, 
+                .backspace, 
+                .capslock, 
+                .ctrl, 
+                .del, 
+                .enter, 
+                .shift, 
+                .shift-right, 
+                .tab, 
+                .win {
+                    font-weight: 600;
+                    color: grey;
+                    background-color: #1c232e;
                 }
 
                 .tab, .del {

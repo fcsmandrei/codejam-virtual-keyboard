@@ -57,6 +57,10 @@ body,
                     -moz-transition: border-radius .3s,background-color .2s;
                     -ms-transition: border-radius .3s,background-color .2s;
                     -o-transition: border-radius .3s,background-color .2s;
+
+                    .Space >.case {
+                        font-size: 0;
+                    }
                 
                    &:hover, &.hover {
                        background-color:lighten(#3a424e,10%);;
